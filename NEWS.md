@@ -1,4 +1,12 @@
-# gdl 0.0.0.9001
+# gdl 0.0.0.9002
+
+* The documentation check no longer fails when a newer `roxygen2` only rewrites
+  the `Config/roxygen2/version` or `RoxygenNote` field in `DESCRIPTION`.
+  It still fails on any other change to `DESCRIPTION`, `NAMESPACE`, or `man/`.
+
+* The docs workflow installs the R package from `quarto-dev/quarto-r`,
+  because `quarto-dev/quarto` has no R package and failed dependency
+  resolution ([`gha#1137`](https://github.com/Morrison-Lab/gha/issues/1137)).
 
 * Fixed gh-pages site root returning 404 before the first stable release: dev
   deploys now drop a small `index.html` redirect at the root pointing to `/dev/`.
