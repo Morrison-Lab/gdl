@@ -1,5 +1,9 @@
 # gdl 0.0.0.9001
 
+* The docs workflow installs the R package from `quarto-dev/quarto-r`,
+  because `quarto-dev/quarto` has no R package and failed dependency
+  resolution (gha#1137).
+
 * Fixed gh-pages site root returning 404 before the first stable release: dev
   deploys now drop a small `index.html` redirect at the root pointing to `/dev/`.
 * `graph_downloads()` examples now render output in altdoc docs builds while
